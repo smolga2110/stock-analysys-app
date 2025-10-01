@@ -19,6 +19,11 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 
   const { theme, setTheme } = useTheme();
 
+  useEffect(() => {
+    setTheme("dark");
+    setIsMounted(true);
+  }, []);
+  
   const {
     Component,
     slots,
@@ -27,7 +32,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     getInputProps,
     getWrapperProps,
   } = useSwitch({
-    isSelected: theme === "dark",
+    isSelected: theme === "light",
     onChange: () => setTheme(theme === "light" ? "dark" : "light"),
   });
 

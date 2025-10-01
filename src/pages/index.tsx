@@ -10,13 +10,13 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <BackgroundBlobs
-        leftBlobSrc="../../public/left-bottom.png"
-        rightBlobSrc="../../public/right-top.png"
+        leftBlobSrc="/left-bottom.png"
+        rightBlobSrc="/right-top.png"
       />
       <section className="flex flex-col items-center justify-center gap-8 py-8 md:py-10">
         <div className="flex flex-col items-center justify-center gap-8">
           <video autoPlay loop muted>
-            <source src="../../public/base.mp4"/>
+            <source src="/base.mp4"/>
           </video>
         </div>
         <div className="inline-block text-center justify-center">
